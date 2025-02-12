@@ -25,13 +25,13 @@ A dynamic and interactive game developed using JavaFX, where players must click 
 - Multimedia Integration: Background music and sound effects.
 
 ## 📂 Code Structure
-- **Main.java:** Launches the application and initializes the primary stage.
+- **`Main.java`:** Launches the application and initializes the primary stage.
 
-- **startController.java:** Handles the main menu (username input, difficulty selection, instructions).
+- **`startController.java`:** Handles the main menu (username input, difficulty selection, instructions).
 
-- **playController.java:** Manages gameplay mechanics (object motion, scoring, pause/resume).
+- **`playController.java`:** Manages gameplay mechanics (object motion, scoring, pause/resume).
 
-- **endController.java:** Displays final scores and leaderboard.
+- **`endController.java`:** Displays final scores and leaderboard.
 
 - **FXML Files:** Define UI layouts (not included here but referenced in code).
 
