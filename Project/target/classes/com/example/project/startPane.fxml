@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: BLANCHEDALMOND; -fx-border-color: BLACK;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.startController">
+   <children>
+      <ImageView fitHeight="300.0" fitWidth="500.0" layoutX="416.0" layoutY="8.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="https://cdn.discordapp.com/attachments/1008487453331574817/1105475585624526904/logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="play" alignment="CENTER" layoutX="528.0" layoutY="507.0" mnemonicParsing="false" onAction="#playHandler" prefHeight="76.0" prefWidth="225.0" style="-fx-border-color: BLACK; -fx-background-color: WHEAT;" text="Play" textFill="#8d8d8d">
+         <font>
+            <Font name="Lucida Console" size="38.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <MediaView fx:id="mediaView" />
+      <Button layoutX="528.0" layoutY="610.0" mnemonicParsing="false" onAction="#exitHandler" prefHeight="76.0" prefWidth="225.0" style="-fx-background-color: WHEAT; -fx-border-color: BLACK;" text="Exit" textFill="#8d8d8d">
+         <font>
+            <Font name="Lucida Console" size="38.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="Error" alignment="CENTER" layoutY="351.0" prefHeight="49.0" prefWidth="1280.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="Lucida Console" size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputUser" alignment="CENTER" layoutX="528.0" layoutY="432.0" prefHeight="49.0" prefWidth="225.0" promptText="Enter username: " style="-fx-border-color: LIGHTGRAY; -fx-text-fill: #8d8d8d;">
+         <font>
+            <Font name="Lucida Console" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <MenuBar layoutX="1.0" layoutY="1.0" style="-fx-background-color: BLANCHEDALMOND; -fx-border-color: TAN;">
+        <menus>
+          <Menu mnemonicParsing="false" text="Difficulty">
+
+               <items>
+                  <RadioMenuItem mnemonicParsing="false" onAction="#Easy" selected="true" text="Easy">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="difficulty" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem mnemonicParsing="false" onAction="#Normal" text="Normal" toggleGroup="$difficulty" />
+                  <RadioMenuItem mnemonicParsing="false" onAction="#Hard" text="Hard" toggleGroup="$difficulty" />
+                  <RadioMenuItem mnemonicParsing="false" onAction="#exHard" text="Impossible" toggleGroup="$difficulty" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#howToPlay" text="How to play?" />
+                  <MenuItem fx:id="system" mnemonicParsing="false" onAction="#scoreSystem" text="Score system" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Music Level">
+              <items>
+                  <CustomMenuItem mnemonicParsing="false" text="musicSliderContainer">
+                     <content>
+                        <Slider fx:id="musicSlider" max="1.0" orientation="HORIZONTAL" value="0.3">
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </Slider>
+                     </content>
+                  </CustomMenuItem>
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
