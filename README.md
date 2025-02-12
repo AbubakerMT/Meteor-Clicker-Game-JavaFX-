@@ -1,6 +1,5 @@
-# ☄️ Meteor Clicker Game (JavaFX)                                                 
-Course: ICS 108 Object-Oriented Programming (Term 222)                                           
-Team: Abdulaziz AlGhadeer & Abubaker Tayeb
+# ☄️ Meteor Clicker Game (JavaFX)          
+A dynamic and interactive game developed using JavaFX, where players must click on falling objects (meteors) before they hit the ground. The game increases in difficulty as objects fall faster, making it both engaging and challenging.
 
 ## 🚀 Project Overview
 
